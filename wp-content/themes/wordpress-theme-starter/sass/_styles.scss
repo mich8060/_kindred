@@ -1,0 +1,348 @@
+@import 'mixins';
+@import 'functions';
+
+$colors: (
+	white:	#FFFFFF,
+	black:	#2c2c2c,
+	blue:	#58aecc,
+	red:	#B11623,
+	orange: #e48325,
+	green: 	#96c835,
+	gray-0: #707070,
+	gray-1:	#666666,
+	gray-2: #a4a4a4,
+	gray-3: #d9d9d9,
+	gray-4: #efefef,
+	gray-5: #f2f2f2
+);
+
+$colorFamily: (
+	beige:	#EFB780,
+	black:	#000,
+	blue: 	#369,
+	brown:	#963,
+	gray:	#ccc,
+	green:	#093,
+	orange:	#f93,
+	pink:	#f39,
+	purple:	#639,
+	red:	#f00,
+	white:	#fff,
+	yellow:	#ff0
+);
+
+/* Typography */
+/*
+200: light
+400: regular
+700: bold
+800: extrabold
+900: black
+*/
+
+/* Fonts */
+@charset "UTF-8";
+
+/* Global */
+html {
+	font-size:18px;
+	height:100%;
+	@include prefix("text-size-adjust", 100%);
+	@include prefix("text-rendering", optimizeLegibility);
+}
+
+@include breakpoint(mobile) {
+	html {
+		font-size:16px;
+	}
+}
+
+body {
+	font-family:"korolev",Helvetica, Arial, Sans-Serif;
+	font-size:100%;
+	font-weight:300;
+	line-height:20px;
+	overflow:scroll; 
+	overflow-y: scroll; 
+	overflow-x: hidden;
+	word-wrap: break-word;
+	-moz-osx-font-smoothing: grayscale;
+	@include breakpoint(non-retina){
+		@include prefix("font-smoothing", "subpixel-antialiased");
+	}
+	
+	@include breakpoint(retina){
+		@include prefix("font-smoothing", "antialiased");
+	}
+	@include prefix("hyphens",none);
+}
+
+@media only screen and (min-width: 0px) and (max-width: 1000px) { 
+	body {	                          
+		@include prefix("user-select", "none");
+	}
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+    /* Retina-specific body weights & smoothing */
+	body {
+		@include prefix("font-smoothing", "antialiased");
+	}
+}
+
+/* Headlines */
+h1, h2, h3, h4, h5, h6, .header-1, .header-2, .header-3, .header-4, .header-5, .header-6 { 
+	font-weight:400; 
+	word-wrap:normal;
+	
+	&.upper {
+		text-transform:uppercase;
+	}
+	
+	&.lower {
+		text-transform:lowercase;
+	}
+	
+	&.capitalize {
+		text-transform:capitalize;
+	}
+	
+	&.light {
+		font-weight:normal;
+	}
+	
+	&.blue {
+		color:colors(blue);
+	}
+	
+	span {
+		color:colors(blue);
+		display:block;
+	}
+}
+
+
+h1, .header-1 {
+	color:colors(gray-1);
+	font-size: 48px;
+	line-height: 44px;
+	text-transform:uppercase;
+	
+	&.display {
+		font-size:68px;
+		font-weight:bold;
+		letter-spacing:-0.02em;
+		line-height:60px;
+		position:relative;
+		left:-2px;
+	}
+	
+	a {
+		color:colors(gray-2);
+		
+		&:hover {
+			color:colors(gray-2);
+		}
+	}
+}
+
+h2, .header-2 {
+	color:colors(gray-1);
+  	font-size: 30px;
+	font-weight:700;
+  	line-height: 36px;
+	text-transform:uppercase;
+	
+	&.normal {
+		font-weight:400;
+		text-transform:none;
+	}
+}
+
+h3, .header-3 {
+	color:colors(gray-1);
+	font-size: 24px;
+	font-weight:900;
+	line-height: 30px; 
+	margin:0;
+	text-transform:uppercase;
+}
+
+h4, .header-4 {
+	font-size: 18px;
+	line-height: 20px;
+	text-decoration:none;
+}
+
+h5, .header-5 {
+	font-size: 12px;
+	line-height: 14px;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+
+h6, .header-6 {
+	font-size: 9px;
+	line-height: 12px;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+
+/* Hyperlinks */
+
+a {
+	color:colors(blue);
+	cursor:pointer;
+	
+	@include prefix("transition", color 0.3s ease);
+	
+	&.underline {
+		text-decoration:underline;
+	}
+	
+	&:hover {
+		color:colors(black);
+	}
+}
+
+	
+/* Paragraphs */
+
+p { 
+	hyphenate: auto;
+	hyphenate-lines: 3;
+	margin:20px 0;
+	letter-spacing:-0.020em;
+	word-spacing: 0.025em;
+	word-wrap:normal;
+	
+	/* Mozilla based browsers */
+	&::-moz-selection {
+	       background-color: #b4d5fe;
+	       color: #222;
+	}
+
+	/* Works in Safari */
+	&::selection {
+	       background-color: #b4d5fe;
+	       color: #222;
+	}
+	
+	&.lg {
+		color:colors(gray-1);
+	  	font-size: 48px;
+		font-weight:100;
+	  	line-height: 72px;
+		padding:50px 0;
+		
+		@include breakpoint(mobile){
+			font-size:24px;
+	  		line-height:36px;
+			padding:20px 0;
+		}
+	}
+	
+	&.md {
+		color:colors(gray-0);
+	  	font-size:36px;
+		font-weight:100;
+  		line-height:60px;
+		padding:50px 0;
+		
+		@include breakpoint(mobile){
+			font-size:18px;
+	  		line-height:24px;
+			padding:20px 0;
+		}
+	}
+
+	&.sm {
+	  font-size: 16px;
+	  line-height: 20px;
+	}
+	
+	&.xs {
+	  font-size: 12px;
+	  line-height: 15px;
+	}
+	
+	&:before,
+	&:after {
+		content: ""; 
+		display: block; 
+		height:0px;
+		margin:0;
+	}
+	
+	&.short:empty {
+		display:block;
+		
+		&:before { 
+			content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus justo sit amet purus bibendum, a tincidunt magna ullamcorper.";
+			display:block;
+			height:auto;
+		}	
+	}
+	
+	&.medium:empty {
+		display:block;
+		
+		&:before { 
+			content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus justo sit amet purus bibendum, a tincidunt magna ullamcorper. Aliquam erat volutpat. Donec id varius tortor, eu semper enim. Nulla dictum et turpis a congue. Vivamus vel justo eget ex tincidunt efficitur non quis tellus.";
+			display:block;
+			height:auto;
+		}	
+	}
+	
+	&.long:empty {
+		display:block;
+		
+		&:before { 
+			content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus justo sit amet purus bibendum, a tincidunt magna ullamcorper. Aliquam erat volutpat. Donec id varius tortor, eu semper enim. Nulla dictum et turpis a congue. Vivamus vel justo eget ex tincidunt efficitur non quis tellus. Mauris ornare bibendum ex, at maximus diam porttitor quis. Nam fermentum massa in imperdiet vestibulum. Curabitur mattis lectus efficitur dignissim tempor.";
+			display:block;
+			height:auto;
+		}	
+	}
+	
+	a:not(.btn) {
+	    margin: -.5em;
+	    padding: .5em;
+	    position: relative;
+	}
+}
+
+.hint,
+.mouse {
+	color:colors(gray-3);
+	font-size:14px;
+	line-height:20px;
+	font-weight:light;
+	-webkit-font-smoothing: subpixel-antialiased; 
+			font-smoothing: subpixel-antialiased;
+}
+
+b, strong, caption, th, thead, dt, legend { 
+	font-weight:'bold';
+}
+
+
+/* Lists */
+ul, ol { 
+	margin:20px 0 20px 16px;
+	
+	li {
+		list-style: disc outside;
+	}
+	
+	ol, ul {
+		margin:0 0 0 20px;
+	}
+}
+
+ol {
+	li {
+		list-style: decimal outside;
+	}
+}
+
+/* Icons */

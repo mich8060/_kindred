@@ -1,0 +1,345 @@
+
+
+
+.me {
+	 
+	&js {  
+		&-background { }
+		
+		&-clear{ } 
+		
+		&-container {   
+			background:#fff;
+			height:40px;
+			margin:60px 0 100px;
+			
+			&:after {
+				content:"Listen on the go";
+				display:block;  
+				font-family:'Work Sans',Helvetica,Arial,Sans-Serif;
+				font-size:14px;  
+				font-weight:700;
+				color:#555;                
+				text-align:center;
+				text-transform:uppercase;
+			}; 
+			
+			&-fullscreen { 
+				video { }
+				.mejs {
+					&-mediaelement {}
+				}
+			}
+		   
+			.mejs { 
+				&-button {
+					button { 
+						
+						background:darken(#B3E4CF,20%) url(../img/controls.svg) no-repeat;           
+						background-size: 360px auto;  
+						height:40px; 
+						left:8px;
+						margin:0; 
+						position:absolute;
+						width:40px; 
+						
+						&:focus {
+							
+						}
+					}
+				}
+				
+				&-controls {
+					background:#eee; 
+					border-radius:80px;
+					height:56px;
+					padding:8px;  
+					position:relative;            
+					
+					div {    
+						box-sizing:border-box; 
+						color:#222;     
+						font-family:'Work Sans',Helvetica,Arial,Sans-Serif;
+						font-size:14px;
+						float:none;  
+						height:auto;           
+					}
+					
+					
+					.mejs {
+						&-time {             
+							color:#222;
+							height:56px;
+							line-height:56px;
+							padding:0;
+							width:80px; 
+							
+							a {
+								
+							}
+						}
+					} 
+					
+         
+				} 
+				&-pause {
+					button {   
+						border-radius:50px; 
+						&:focus { outline:none; }
+					}
+				}
+				&-play {
+					button {
+						border-radius:50px;
+						&:focus { outline:none; }
+					}
+				}
+				
+				
+			}        
+		}
+         
+		&-controls { 
+		    
+			 
+			a.mejs, 
+			div.mejs,
+			.mejs { 
+				&-horizontal {
+					&-volume {   
+						&-current,
+						&-handle,
+						&-slider,
+						&-total {
+							display:none;
+						}
+					}
+				}
+				&-mute {
+					button {
+						background-position: -40px -40px;
+					}
+				}  
+				&-pause {
+					button {
+						background-position: 0 -40px;
+					}
+				}
+				&-play {
+					button {
+						
+					}
+				}
+				&-stop {
+					button {
+						background-position: -112px 0;
+						
+					}
+				}
+				
+				&-time {
+					&-rail {   
+						padding:0;
+						width:auto !important;   
+						
+						.mejs {  
+							&-duration {
+								position: absolute;
+								    right: 0;
+								    width: 100px;
+								    top: 0;
+								    outline: solid 1px green;
+								    line-height: 55px;
+							}
+							&-time {  
+								&-buffering {
+								    background-image: linear-gradient(-45deg, rgba(0,0,0,0.15) 25%, transparent 25%, transparent 50%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0.15) 75%, transparent 75%, transparent);
+								    background-size: 15px 15px;	
+								}
+								
+								&-current { background:darken(#B3E4CF,20%); }
+								
+								&-float {          
+									top:0;
+									margin-left:0;
+								}             
+								&-loaded { background:rgba(179,228,207,0.3); } 
+								&-total {  
+								    background:#FFF; 
+									border-radius:50px;
+								 	box-sizing:border-box;
+									margin:0;   
+									overflow:hidden;
+									position:absolute;
+									top:50%;
+									transform:translateY(-50%);
+									width:100% !important; 
+									
+									&:focus { outline:none; }              
+								}
+							}
+						}
+					}
+				}
+			    &-unmute {
+					button {
+						background-position: -40px 0;
+					}
+				}
+				&-volume {
+					&-button {
+						bottom:0;    
+					    position:absolute;
+					    right:-4px;  
+						text-align:center;
+					  	top:0;   
+						width:60px;              
+						
+						button {                          
+							border-radius:50px; 
+							position:absolute;
+							top:50%;  
+							transform:translateY(-50%); 
+							
+							&:focus {
+								outline:none;
+							}
+						}
+					}
+				}
+			}
+		}
+        
+        &-currenttime {
+			&-container {  
+				bottom:0;
+		    	height:80px;  
+				left:48px;
+				line-height:80px;  
+				padding:0;  
+				position:absolute;  
+				top:0;                 
+				width:100px;
+			}
+		}
+		
+		&-duration{ 
+			&-container {
+				position:absolute;
+				top:0;                  
+				right:0; 
+				width:80px;	 
+			}
+
+		}
+		
+
+		&-embed {
+			background:#fff;
+
+			body {  
+				background:#fff;
+			}
+		}
+
+		&-fill {
+			&-container {               
+
+				&:focus {
+
+				}
+			}
+		}
+		
+		&-fullscreen{ }
+        &-horizontal {
+			&-volume {
+				&-total {
+					display:none;
+				}
+			}
+		}
+		&-mediaelement{ }
+		&-offscreen { }
+		&-overlay { 
+			&:hover {
+				.mejs {
+					&-overlay {
+						&-button {
+							
+						}
+					}
+				}
+			}
+			
+			&-button{
+				background: url(http://localhost:8888/_kindred/wp-includes/js/mediaelement/bigplay.svg) no-repeat;  
+			}
+			
+			&-loading {    
+	   			background: url(http://localhost:8888/_kindred/wp-includes/js/mediaelement/background.png);
+	
+				span {
+					background: transparent url(http://localhost:8888/_kindred/wp-includes/js/mediaelement/loading.gif) 50% 50% no-repeat;
+				}
+			}
+			
+			&-play{ }
+		}
+		&-poster{ 
+			img { }
+		} 
+		
+		&-time { 
+			
+			&-rail {                  
+				bottom:0;
+		 		box-sizing:border-box;
+				height:80px;      
+				left:130px;
+				position:absolute;   
+				right:130px;
+				top:0;                     
+				width:auto;	
+			}
+			
+			&-slider {                  
+			} 
+			
+			.mejs {
+				&-currenttime {
+					&-container {
+
+					}
+				}
+			}
+		}	
+	}
+	
+	&-plugin {}
+}                                                              
+
+.no {
+	&-svg {
+		.mejs {
+			&-controls {
+				.mejs {
+					&-button {
+						button {
+							background-image: url(http://localhost:8888/_kindred/wp-includes/js/mediaelement/controls.png);
+						}
+					}
+				}
+			}
+			&-overlay {
+				&-button {
+					background-image: url(http://localhost:8888/_kindred/wp-includes/js/mediaelement/bigplay.png);
+				}
+			}
+		}
+	}
+}     
+
+@media only screen and (min-width: 600px) {
+	.mejs-duration-container { right:48px; } 
+}

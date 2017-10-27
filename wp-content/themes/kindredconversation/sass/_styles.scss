@@ -1,0 +1,92 @@
+@import 'mixins';
+@import 'functions';   
+
+$fonts: (
+	primary:('Work Sans',Helvetica,Arial,Sans-Serif),
+	secondary:('ChronicleDisplay','Times New Roman',Georgia,Serif)
+);
+
+$colors: (
+	white:	#FFFFFF,
+	black:	#2c2c2c,
+	blue:	#58aecc,
+	red:	#B11623,
+	orange: #e48325,
+	green: 	#B3E4CF,
+	gray-0: #707070,
+	gray-1:	#666666,
+	gray-2: #a4a4a4,
+	gray-3: #d9d9d9,
+	gray-4: #efefef,
+	gray-5: #f2f2f2
+);
+
+$colorFamily: (
+	beige:	#EFB780,
+	black:	#000,
+	blue: 	#369,
+	brown:	#963,
+	gray:	#ccc,
+	green:	#093,
+	orange:	#f93,
+	pink:	#f39,
+	purple:	#639,
+	red:	#f00,
+	white:	#fff,
+	yellow:	#ff0
+);
+
+/* Typography */
+/*
+200: Light
+400: Regular
+700: Bold
+800: Extrabold
+900: Black
+*/
+
+/* Fonts */
+@charset "UTF-8"; 
+
+/* Embedding Chronicle Display Font */
+@font-face {
+  	font-family: 'ChronicleDisplay';
+  	font-weight: 100;
+  	font-style: normal;
+  	src: url("../fonts/ChronicleDisplay-XLight.ttf") format("truetype");
+}        
+
+@font-face {
+  	font-family: 'ChronicleDisplay';
+  	font-weight: 200;
+  	font-style: normal;
+  	src: url("../fonts/ChronicleDisplay-Light.ttf") format("truetype");
+} 
+
+@font-face {
+  	font-family: 'ChronicleDisplay';
+  	font-weight: 400;
+  	font-style: normal;
+  	src: url("../fonts/ChronicleDisplay-Roman.ttf") format("truetype");
+}  
+
+@font-face {
+  	font-family: 'ChronicleDisplay';
+  	font-weight: 500;
+  	font-style: normal;
+  	src: url("../fonts/ChronicleDisplay-Semi.ttf") format("truetype");
+} 
+
+@font-face {
+  	font-family: 'ChronicleDisplay';
+  	font-weight: 700;
+  	font-style: normal;
+  	src: url("../fonts/ChronicleDisplay-Bold.ttf") format("truetype");
+} 
+
+@font-face {
+  	font-family: 'ChronicleDisplay';
+  	font-weight: 900;
+  	font-style: normal;
+  	src: url("../fonts/ChronicleDisplay-Black.ttf") format("truetype");
+}

@@ -1,0 +1,120 @@
+body {
+	background:#F2F2F2;
+	font-family: 'Work Sans', sans-serif;
+	font-weight:400;
+	padding-top:100px;
+}
+
+* { box-sizing:border-box; }
+
+.header { 
+	background:#fff;    
+	height:80px;
+	left:20px;   
+	padding:15px;
+	position:fixed;
+	right:20px;
+	top:20px;                         
+	
+	&--branding {   
+		background:url(../img/kindred_conversation.png) no-repeat center center;
+		background-size:200px auto; 
+		height:50px;         
+		width:200px;             
+	}
+	
+	&--container { 
+		display:flex;
+		flex-direction:row;
+	} 
+	
+	&--nav {   
+		margin:-15px 0;         
+		
+		ul,li {
+			list-style-type:none;
+			margin:0;
+			padding:0;
+		}
+		
+		ul {
+			display:flex; 
+			flex-direction:row;
+			
+			li {
+				a {              
+					color:#000;
+					display:block; 
+					font-size:16px;
+					font-weight:600;
+					padding:30px 20px;
+				}
+			}
+		}
+	}
+	
+	&--search {
+		margin:-15px 20px;
+		padding:20px 0;   
+		width:320px;
+	}
+}
+ 
+.footer {
+	background:#fff;
+	padding-bottom:100px; 
+	
+	&--container {
+		text-align:center;
+	}
+	
+	&--contact {
+		background:#B3DDEB; 
+		font-weight:600;
+		padding:20px;
+		text-align:center;
+	} 
+	
+	&--copyright {      
+		color:#aaa;
+		font-size:14px;
+		font-weight:400;
+	}
+	
+	&--mark {      
+		margin:40px auto 0;
+		width:72px;
+	}
+	
+	&--nav {
+		padding:20px 0; 
+		
+		ul,li {
+			list-style-type:none;
+			margin:0;
+			padding:0; 
+		}
+		
+		ul {
+			display:flex; 
+			flex-direction:row; 
+			justify-content:center;
+			
+			li {
+				a {              
+					color:#000;
+					display:block; 
+					font-size:16px;
+					font-weight:600;
+					padding:30px 20px;
+				}
+			}
+		}
+	}
+}
+
+.main {
+	min-height:600px;
+	padding:20px;
+
+}
